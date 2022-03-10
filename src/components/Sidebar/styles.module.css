@@ -1,0 +1,51 @@
+.sidebar {
+    background: var(--grey-100);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+.toggleBtn {
+    display: none;
+}
+
+.logo {
+    margin: 0;
+    font-size: var(--font-size-xl);
+    line-height: 1;
+    color: var(--black);
+}
+
+.linksList {
+    display: none;
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+}
+
+
+@media (max-width: 600px) {
+    .sidebar {
+        position: relative;
+        z-index: 1;
+    }
+
+    .toggleBtn {
+        display: block;
+        font-family: inherit;
+        background-color: var(--white);
+        border: 1px solid var(--grey-200);
+    }
+
+    .linksList {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        background-color: var(--grey-100);
+    }
+}

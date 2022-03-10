@@ -1,0 +1,21 @@
+.channel {
+    display: block;
+    width: 100%;
+    border: 0;
+    text-align: left;
+    color: var(--black);
+    min-height: 48px;
+    font-size: var(--font-size);
+    padding: 16px 24px;
+    transition: background-color 0.2s;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.channel:hover {
+    background-color: var(--grey-200);
+}
+
+.active {
+    background-color: var(--grey-200);
+}
