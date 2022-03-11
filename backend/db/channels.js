@@ -1,5 +1,5 @@
 export const channels = [
-    { id: 1, title: '#channel-one', messages: [] },
-    { id: 2, title: '#channel-two', messages: [] },
-    { id: 3, title: '#channel-three', messages: [] },
+    { id: 1, title: '#channel-one' },
+    { id: 2, title: '#channel-two' },
+    { id: 3, title: '#channel-three' },
 ];

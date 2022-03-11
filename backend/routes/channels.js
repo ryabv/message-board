@@ -1,5 +1,6 @@
 import { Router } from 'express';
-import { getChannelsList, postMessageToChannel } from '../controllers/channels.js';
+import { postMessageToChannel } from '../controllers/messages.js';
+import { getChannelsList } from '../controllers/channels.js';
 const router = Router();
 
 router.get('/channels', getChannelsList);
