@@ -2,7 +2,8 @@
 
 ## How to run
 
-Run command `npm start` in project folder, it will automatically start backend and frontend.
+1. Run `npm run install:all`;
+2. Run command `npm start` in project folder, it will automatically start backend and frontend.
 
 If you have some troubles with starting backend, you should use node with version from `.nvmrc`.
 1. If you don't have `nvm` run `npm i nvm -g`;
