@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="483b0cc2-2a89-42a7-bf70-53751759b693" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/network.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/channels.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/channels.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/messages.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db/channels-messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db/channels-messages.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db/channels.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db/channels.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db/messages.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/channels.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/channels.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/messages.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/messages.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/hooks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SendForm/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SendForm/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/hooks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/keyboard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/keyboard.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +61,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646917420207</updated>
-      <workItem from="1646917422104" duration="36977000" />
+      <workItem from="1646917422104" duration="37310000" />
     </task>
     <servers />
   </component>
