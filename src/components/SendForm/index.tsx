@@ -30,7 +30,7 @@ const SendForm: FC<Props> = ({ className, activeChannelId }) => {
             dispatch(postMessageToChannel({ channelId: activeChannelId, text }));
             setText('');
         }
-    }, [activeChannelId, text]);
+    }, [activeChannelId, text, dispatch]);
 
     return (
         <form className={cn(st.form, [className])} onSubmit={handleSubmitForm}>

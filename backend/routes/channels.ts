@@ -1,7 +1,7 @@
 import { Router } from 'express';
 
-import { postMessageToChannel } from '../controllers/messages.js';
-import { getChannelsList } from '../controllers/channels.js';
+import { postMessageToChannel } from '../controllers/messages';
+import { getChannelsList } from '../controllers/channels';
 
 const router = Router();
 

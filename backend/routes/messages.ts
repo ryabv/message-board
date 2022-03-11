@@ -1,6 +1,6 @@
 import { Router } from 'express';
 
-import { getMessagesByChannelId } from '../controllers/messages.js';
+import { getMessagesByChannelId } from '../controllers/messages';
 
 const router = Router();
 

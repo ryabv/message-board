@@ -12,7 +12,7 @@ export const useFetchChannelData = (channelId: number | null) => {
         if (!channel?.messages.length && channelId) {
             dispatch(fetchChannelMessages(channelId));
         }
-    }, [channel?.messages.length, channelId]);
+    }, [channel?.messages.length, channelId, dispatch]);
 
     return channel;
 };

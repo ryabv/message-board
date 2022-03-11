@@ -1,16 +1,17 @@
 import express from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
 
-import channelsRoutes from './routes/channels.js';
-import messagesRoutes from './routes/messages.js';
+import channelsRoutes from './routes/channels';
+import messagesRoutes from './routes/messages';
 
-const PORT = process.env.PORT ?? 3001;
+dotenv.config();
+
+const PORT = process.env.BACKEND_PORT ?? 3001;
 
 const app = express();
 
-app.use(cors({
-    origin: '*',
-}));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(channelsRoutes);

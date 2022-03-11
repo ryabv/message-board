@@ -1,45 +1,20 @@
+import { request } from '../utils/network';
+
 export const channelsController = {
-    getChannelsList(): Promise<any> {
-        return fetch('http://localhost:3001/channels')
-            .then(
-                (res) => {
-                    return res.json();
-                },
-                (exception) => {
-                    throw new Error(exception);
-                },
-            );
+    getChannelsList() {
+        return request('/channels');
     },
 };
 
 export const messagesController = {
-    getMessagesByChannelId(id: number): Promise<any> {
-        return fetch(`http://localhost:3001/messages/${id}`)
-            .then(
-                (res) => {
-                    return res.json();
-                },
-                (exception) => {
-                    throw new Error(exception);
-                },
-            );
+    getMessagesByChannelId(id: number) {
+        return request(`/messages/${id}`);
     },
 
-    postMessageToChannel(id: number, data: { text: string }): Promise<any> {
-        return fetch(`http://localhost:3001/${id}`, {
+    postMessageToChannel(id: number, data: { text: string }) {
+        return request(`/${id}`, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
             body: JSON.stringify(data),
-        })
-            .then(
-                (res) => {
-                    return res.json();
-                },
-                (exception) => {
-                    throw new Error(exception);
-                },
-            );
+        });
     },
 };

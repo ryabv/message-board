@@ -14,7 +14,7 @@ export const useKeyDown = (checkKeyCode: (e: KeyboardEvent) => boolean, handler:
         document.addEventListener('keydown', handleEscape);
 
         return () => document.removeEventListener('keydown', handleEscape);
-    }, [handler]);
+    }, [handler, checkKeyCode]);
 };
 
 export const useOnEscape = (handler: (e: KeyboardEvent) => void) =>
