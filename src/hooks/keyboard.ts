@@ -1,4 +1,4 @@
-import {useEffect} from "react";
+import { useEffect } from 'react';
 
 const ESCAPE_CODE = 'Escape';
 const ENTER_CODE = 'Enter';

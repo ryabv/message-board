@@ -1,5 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+
 import { Channel } from '../models/channel';
+import { Message } from '../models/message';
+import { fetchChannelMessages, fetchChannels, postMessageToChannel } from '../side-effects/channels';
 
 interface ChannelsState {
     ids: number[],
@@ -7,52 +10,35 @@ interface ChannelsState {
 }
 
 const initialState: ChannelsState = {
-    ids: [1, 2, 3],
-    byId: {
-        1: {
-            id: 1,
-            title: '#channel-one',
-            messages: [],
-        },
-        2: {
-            id: 2,
-            title: '#channel-two',
-            messages: [
-                {
-                    id: 1,
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                }
-            ]
-        },
-        3: {
-            id: 3,
-            title: '#channel-three',
-            messages: [
-                {
-                    id: 1,
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                },
-                {
-                    id: 2,
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-                },
-                {
-                    id: 3,
-                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation...'
-                },
-            ]
-        },
-    }
+    ids: [],
+    byId: {},
 };
 
 const channelsSlice = createSlice({
     name: 'channels',
     initialState,
-    reducers: {
-        addMessage(state, action: PayloadAction<{ channelId: number, text: string }>) {
-            state.byId[action.payload.channelId].messages.push({ id: Date.now(), text: action.payload.text })
+    reducers: {},
+    extraReducers: {
+        [fetchChannels.fulfilled.type]: (state, action: PayloadAction<Channel[]>) => {
+            state.ids = action.payload.map(({ id }) => id);
+            state.byId = action.payload.reduce<Record<number, Channel>>((acc, channel) => {
+                acc[channel.id] = { ...channel, messages: [] };
+                return acc;
+            }, {});
         },
-    },
+        [fetchChannelMessages.fulfilled.type]: (
+            state,
+            action: PayloadAction<{ channelId: number, messages: Message[] }>,
+        ) => {
+            state.byId[action.payload.channelId].messages = action.payload.messages;
+        },
+        [postMessageToChannel.fulfilled.type]: (
+            state,
+            action: PayloadAction<{ channelId: number, message: Message }>,
+        ) => {
+            state.byId[action.payload.channelId].messages.push(action.payload.message);
+        },
+    }
 });
 
 export const actions = channelsSlice.actions;

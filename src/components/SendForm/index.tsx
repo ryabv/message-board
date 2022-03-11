@@ -1,10 +1,11 @@
-import {ChangeEvent, FC, FormEvent, useCallback, useRef, useState} from 'react';
+import { ChangeEvent, FC, FormEvent, useCallback, useRef, useState } from 'react';
 import cn from 'classnames';
 
+import { useAppDispatch } from '../../hooks/redux';
+import { useOnCtrlEnter } from '../../hooks/keyboard';
+import { postMessageToChannel } from '../../store/side-effects/channels';
+
 import st from './styles.module.css';
-import {actions} from "../../store/reducers/channelsSlice";
-import {useAppDispatch} from "../../hooks/redux";
-import {useOnCtrlEnter} from "../../hooks/keyboard";
 
 interface Props {
     className?: string;
@@ -26,7 +27,7 @@ const SendForm: FC<Props> = ({ className, activeChannelId }) => {
         e.preventDefault();
 
         if (activeChannelId) {
-            dispatch(actions.addMessage({ channelId: activeChannelId, text }));
+            dispatch(postMessageToChannel({ channelId: activeChannelId, text }));
             setText('');
         }
     }, [activeChannelId, text]);
@@ -41,7 +42,7 @@ const SendForm: FC<Props> = ({ className, activeChannelId }) => {
 
             <button
                 ref={submitButtonRef}
-                type="submit"
+                type='submit'
                 disabled={!text}
                 className={st.submitBtn}
             >

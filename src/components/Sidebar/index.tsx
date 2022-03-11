@@ -1,12 +1,11 @@
-import {Dispatch, FC, SetStateAction, SyntheticEvent, useCallback, useEffect, useState} from 'react';
+import { Dispatch, FC, SetStateAction, SyntheticEvent, useCallback, useEffect, useState } from 'react';
 import cn from 'classnames';
 
+import { useWindowSize } from '../../hooks/browser';
 import SidebarButton from '../SidebarButton';
 
+import { useFetchChannels } from './hooks';
 import st from './styles.module.css';
-import {useAppSelector} from "../../hooks/redux";
-import {getChannelsList} from "../../store/selectors/channels";
-import {useWindowSize} from "../../hooks/browser";
 
 interface Props {
     className?: string;
@@ -15,7 +14,8 @@ interface Props {
 }
 
 const Sidebar: FC<Props> = ({ className, activeChanelId, setActiveChanelId }) => {
-    const channels = useAppSelector(getChannelsList);
+    const channels = useFetchChannels();
+
     const [showChannels, setShowChannels] = useState(true);
     const { width } = useWindowSize();
 
@@ -36,7 +36,7 @@ const Sidebar: FC<Props> = ({ className, activeChanelId, setActiveChanelId }) =>
     }, [setActiveChanelId, isDesktop]);
 
     const getLinks = useCallback(() => channels.map(({ id, title }) => (
-        <li className={st.linksItem}>
+        <li key={id} className={st.linksItem}>
             <SidebarButton
                 isActive={id === activeChanelId}
                 value={id}
