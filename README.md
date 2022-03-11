@@ -1,5 +1,5 @@
-#Message Board
+# Message Board
 
-##How to run
+## How to run
 
 Run command `npm start` in project folder, it will automatically start backend and frontend;
