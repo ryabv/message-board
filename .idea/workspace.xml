@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="483b0cc2-2a89-42a7-bf70-53751759b693" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/App/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/App/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Content/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Content/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SendForm/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SendForm/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Sidebar/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Sidebar/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SidebarButton/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SidebarButton/styles.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/browser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/keyboard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/redux.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/models/channel.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/models/message.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/channelsSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/reducers/messageSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/selectors/channels.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/dom.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Content/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content/styles.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646917420207</updated>
-      <workItem from="1646917422104" duration="18247000" />
+      <workItem from="1646917422104" duration="18915000" />
     </task>
     <servers />
   </component>
