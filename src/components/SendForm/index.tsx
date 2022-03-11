@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, FormEvent, useCallback, useRef, useState } from 'react';
+import {ChangeEvent, FC, FormEvent, useCallback, useEffect, useRef, useState} from 'react';
 import cn from 'classnames';
 
 import { useAppDispatch } from '../../hooks/redux';
@@ -18,6 +18,10 @@ const SendForm: FC<Props> = ({ className, activeChannelId }) => {
     const dispatch = useAppDispatch();
 
     useOnCtrlEnter(() => submitButtonRef.current?.click());
+
+    useEffect(() => {
+        setText('');
+    }, [activeChannelId]);
 
     const handleTextChange = useCallback((e: ChangeEvent<HTMLTextAreaElement>) => {
         setText(e.currentTarget.value);
